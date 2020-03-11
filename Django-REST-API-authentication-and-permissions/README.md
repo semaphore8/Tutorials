@@ -1,0 +1,1 @@
+[All you need to know about permissions in Django REST Framework](https://www.simonbliznyuk.com/All-you-need-to-know-about-permissions-in-Django-REST-Framework) tutorial

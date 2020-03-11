@@ -5,7 +5,7 @@ from .models import Task
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['url', 'username']
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -14,6 +14,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
+    assigned_to = serializers.StringRelatedField()
     class Meta:
         model = Task
-        fields = ['id', 'title', 'summary']
+        fields = ['url', 'id', 'title', 'summary', 'assigned_to']
